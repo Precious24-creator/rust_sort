@@ -1,0 +1,18 @@
+[package]
+name = "rust_sort"
+version = "1.0.0"
+edition = "2021"
+description = "A CLI tool to sort lines in a file"
+authors = ["Precious24"]
+license = "MIT"
+repository = "https://github.com/Precious24-creator/rust_sort"
+readme = "README.md"
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }  # CLI argument parsing
+anyhow = "1.0"  # Better error handling
+
+[profile.release]
+opt-level = 3  # Optimize for performance
+lto = true  # Link Time Optimization for smaller binary size
+strip = true  # Remove debug symbols to reduce binary size
